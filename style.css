@@ -6,13 +6,9 @@
     --branco: #ffffff;
     --texto-escuro: #333333;
     --texto-claro: #cccccc;
-    --cinza-subtil: #e9e9e9;
-    --sombra-card: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 /* Base Reset e Fontes */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -20,11 +16,11 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Assumindo uma fonte profissional */
     line-height: 1.6;
     color: var(--texto-escuro);
     background-color: var(--prata-claro);
-    overflow-x: hidden;
+    overflow-x: hidden; /* Evita scroll horizontal indesejado */
 }
 
 a {
@@ -35,12 +31,6 @@ a {
 
 a:hover {
     color: var(--verde-menta);
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 5%;
 }
 
 /* Cabeçalho (Header) */
@@ -54,20 +44,25 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.logo a {
-    color: var(--verde-menta);
-    font-size: 1.8em;
-    font-weight: 700;
-    letter-spacing: 1px;
+/* Ajuste para o LOGOTIPO em Imagem [CORREÇÃO] */
+header .logo img {
+    height: 40px; /* Define altura padrão do logo */
+    max-width: 250px;
+    width: auto;
+    display: block;
 }
 
-.menu-desktop ul {
+/* Menu de Navegação */
+.menu-desktop {
     list-style: none;
     display: flex;
-    gap: 30px;
+}
+
+.menu-desktop li {
+    margin-left: 25px;
 }
 
 .menu-desktop a {
@@ -77,20 +72,15 @@ header {
     position: relative;
 }
 
-.menu-desktop a.active,
-.menu-desktop a:hover {
-    color: var(--verde-menta);
-}
-
 .menu-desktop a::after {
     content: '';
     position: absolute;
-    bottom: -5px;
-    left: 0;
     width: 0;
     height: 2px;
+    bottom: -5px;
+    left: 0;
     background-color: var(--verde-menta);
-    transition: width 0.3s ease-out;
+    transition: width 0.3s ease-in-out;
 }
 
 .menu-desktop a:hover::after,
@@ -98,43 +88,72 @@ header {
     width: 100%;
 }
 
-.cta-menu {
-    background-color: var(--verde-menta);
-    color: var(--azul-profundo) !important;
-    padding: 8px 15px;
-    border-radius: 50px;
-    font-weight: 700;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.cta-menu:hover {
-    background-color: #5bb09f;
-    transform: translateY(-2px);
-}
-
-.cta-menu::after {
-    display: none;
-}
-
 .menu-mobile-btn {
-    display: none;
-    background: none;
-    border: none;
-    color: var(--branco);
+    display: none; /* Esconde em desktop */
     font-size: 1.5em;
     cursor: pointer;
 }
 
-/* --- Hero (Seção Principal - Index.html) --- */
+/* Seções Padrão */
+.secao-padrao {
+    padding: 80px 5%;
+    background-color: var(--prata-claro);
+    text-align: center;
+}
+
+.secao-secundaria {
+    padding: 80px 5%;
+    background-color: var(--branco);
+    text-align: center;
+}
+
+.titulo-secao {
+    font-size: 2.5em;
+    color: var(--azul-profundo);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.subtitulo-secao {
+    font-size: 1.2em;
+    color: var(--texto-escuro);
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Chamada de Ação (CTA) Principal */
+.cta-principal-btn {
+    display: inline-block;
+    background-color: var(--verde-menta);
+    color: var(--azul-profundo);
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 76, 109, 0.2);
+}
+
+.cta-principal-btn:hover {
+    background-color: #55a897;
+    transform: translateY(-2px);
+}
+
+/* Seção Hero (Index) */
 .hero {
-    position: relative;
-    width: 100%;
-    height: 85vh;
-    background-color: var(--azul-profundo);
-    color: var(--branco);
+    height: 90vh;
     display: flex;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+    color: var(--branco);
+    position: relative;
     overflow: hidden;
+    background-color: var(--azul-profundo); /* Cor de fallback */
 }
 
 #hero-3d-background {
@@ -143,395 +162,244 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    z-index: 1;
 }
 
 .hero-content {
     position: relative;
     z-index: 10;
-    max-width: 600px;
     padding: 0 5%;
 }
 
-.hero-content h1 {
+.hero-content h2 {
     font-size: 3.5em;
-    font-weight: 700;
-    line-height: 1.1;
     margin-bottom: 20px;
-    color: var(--verde-menta);
+    font-weight: 800;
+    line-height: 1.1;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content p {
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin-bottom: 30px;
     font-weight: 300;
 }
 
-.cta-principal-btn {
-    display: inline-block;
-    background-color: var(--verde-menta);
-    color: var(--azul-profundo) !important;
-    padding: 15px 30px;
-    border-radius: 50px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    box-shadow: 0 6px 20px rgba(102, 184, 167, 0.4);
-    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
-}
-
-.cta-principal-btn:hover {
-    background-color: #5bb09f;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(102, 184, 167, 0.6);
-}
-
-/* --- Estilos Gerais de Seções --- */
-section {
-    padding: 80px 0;
-}
-
-.titulo-secao {
-    font-size: 2.5em;
-    font-weight: 700;
-    text-align: center;
-    color: var(--azul-profundo);
-    margin-bottom: 10px;
-}
-
-.subtitulo-secao {
-    text-align: center;
-    color: #666;
-    margin-bottom: 40px;
-    font-size: 1.1em;
-}
-
-/* --- Seção de Feridas Crônicas (Index.html) --- */
-.feridas-cronicas {
-    background-color: var(--branco);
-}
-
-.feridas-content {
-    display: flex;
-    align-items: center;
-    gap: 50px;
+/* Grid de Protocolos (Index) */
+.protocolos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
     margin-top: 40px;
 }
 
-.feridas-texto {
-    flex: 1;
+.protocolo-card {
+    background-color: var(--branco);
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.feridas-texto h3 {
-    font-size: 1.8em;
-    color: var(--verde-menta);
-    margin-bottom: 15px;
+.protocolo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-.feridas-texto ul {
+.protocolo-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.protocolo-card-content {
+    padding: 25px;
+}
+
+.protocolo-card-content h3 {
+    color: var(--azul-profundo);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.protocolo-card-content ul {
     list-style: none;
     padding-left: 0;
-    margin: 20px 0;
+    margin-top: 15px;
 }
 
-.feridas-texto ul li {
-    background: url('assets/icons/check-verde.svg') no-repeat left center;
-    background-size: 20px;
-    padding-left: 30px;
-    margin-bottom: 10px;
-    font-size: 1.05em;
+.protocolo-card-content ul li {
+    font-size: 0.95em;
+    color: var(--texto-escuro);
+    margin-bottom: 8px;
+    padding-left: 1.2em;
+    position: relative;
 }
 
-.feridas-imagem {
-    flex: 1;
-    text-align: center;
+.protocolo-card-content ul li::before {
+    content: "\f00c"; /* Ícone de check do Font Awesome */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: var(--verde-menta);
+    position: absolute;
+    left: 0;
 }
 
-.feridas-imagem img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-/* --- Seção de Diferenciais (Index.html) --- */
-.diferenciais {
-    background-color: var(--prata-claro);
-    text-align: center;
-}
-
-.diferenciais-grid {
+/* Seção de Tratamento de Feridas (Index) */
+.servico-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.diferencial-card {
-    background-color: var(--branco);
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: var(--sombra-card);
-    transition: transform 0.3s;
-}
-
-.diferencial-card:hover {
-    transform: translateY(-5px);
-}
-
-.diferencial-card i {
-    font-size: 2.5em;
-    color: var(--verde-menta);
-    margin-bottom: 15px;
-}
-
-.diferencial-card h4 {
-    font-size: 1.4em;
-    color: var(--azul-profundo);
-    margin-bottom: 10px;
-}
-
-/* --- Seção de Quem Somos (Index.html) --- */
-.quem-somos {
-    background-color: var(--azul-profundo);
-    color: var(--branco);
-    padding: 80px 0;
-}
-
-.quem-somos .titulo-secao {
-    color: var(--verde-menta);
-}
-
-.quem-somos-content {
-    display: flex;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
     gap: 50px;
-    margin-top: 40px;
+    align-items: center;
+    text-align: left;
+    max-width: 1100px;
+    margin: 40px auto 0 auto;
 }
 
-.quem-somos-imagem {
-    flex: 1;
-    text-align: center;
-}
-
-.quem-somos-imagem img {
+.servico-card img {
     width: 100%;
-    max-width: 350px;
-    height: auto;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.servico-content h3 {
+    font-size: 2em;
+    color: var(--azul-profundo);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.servico-content p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+/* Section Quem Somos (Index) */
+.quem-somos-blurb {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+    text-align: left;
+}
+
+.quem-somos-blurb img {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    border: 5px solid var(--verde-menta);
-    box-shadow: 0 0 0 10px rgba(102, 184, 167, 0.3);
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.quem-somos-texto {
-    flex: 2;
-}
-
-.quem-somos-texto h3 {
-    font-size: 1.8em;
+.blurb-text h4 {
     color: var(--verde-menta);
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.blurb-text h3 {
+    color: var(--azul-profundo);
+    font-size: 1.8em;
     margin-bottom: 15px;
 }
 
-.cta-secundario-btn {
-    display: inline-block;
-    color: var(--verde-menta) !important;
-    border: 2px solid var(--verde-menta);
-    padding: 12px 25px;
-    border-radius: 50px;
-    font-weight: 600;
-    margin-top: 20px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.cta-secundario-btn:hover {
-    background-color: var(--verde-menta);
-    color: var(--azul-profundo) !important;
-}
-
-/* --- Seção de Depoimentos (Index.html) --- */
-.depoimentos {
-    background-color: var(--prata-claro);
-}
-
+/* Sessão de Depoimentos (Index) */
 .depoimentos-grid {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
     margin-top: 40px;
-    flex-wrap: wrap;
 }
 
 .depoimento-card {
-    background-color: var(--branco);
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: var(--sombra-card);
+    background-color: var(--prata-claro);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
     max-width: 350px;
-    position: relative;
-    border-left: 5px solid var(--verde-menta);
-}
-
-.depoimento-card i.fa-quote-left {
-    color: var(--cinza-subtil);
-    font-size: 2em;
-    position: absolute;
-    top: 15px;
-    right: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .depoimento-card p {
     font-style: italic;
+    color: var(--texto-escuro);
     margin-bottom: 15px;
 }
 
-.depoimento-autor {
+.depoimento-card footer {
     font-weight: 600;
     color: var(--azul-profundo);
-    display: block;
-    margin-top: 10px;
 }
 
-/* --- Seção de FAQ (Index.html) --- */
-.faq-section {
-    background-color: var(--branco);
-}
-
-.faq-container {
-    max-width: 800px;
-    margin: 40px auto 0;
-}
-
-.faq-item {
-    border: 1px solid var(--cinza-subtil);
-    border-radius: 8px;
-    margin-bottom: 15px;
-    overflow: hidden;
-}
-
-.faq-pergunta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 25px;
-    font-size: 1.1em;
-    font-weight: 600;
-    color: var(--azul-profundo);
-    background-color: var(--prata-claro);
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.faq-pergunta:hover {
-    background-color: var(--cinza-subtil);
-}
-
-.faq-pergunta i {
-    transition: transform 0.3s;
-}
-
-.faq-pergunta[aria-expanded="true"] i {
-    transform: rotate(180deg);
-    color: var(--verde-menta);
-}
-
-.faq-resposta {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
-    padding: 0 25px;
-    background-color: var(--branco);
-}
-
-.faq-resposta p {
-    padding-bottom: 20px;
-}
-
-/* --- Seção CTA (Geral) --- */
-.cta-agendar {
-    background-color: var(--verde-menta);
-    color: var(--azul-profundo);
+/* Seção Contato/CTA (Index) */
+.cta-contato {
+    background-color: var(--azul-profundo);
+    color: var(--branco);
     text-align: center;
     padding: 60px 5%;
 }
 
-.cta-agendar h2 {
+.cta-contato h2 {
     font-size: 2.2em;
     margin-bottom: 15px;
     font-weight: 700;
 }
 
-.cta-agendar p {
-    font-size: 1.1em;
+.cta-contato p {
+    font-size: 1.2em;
     margin-bottom: 30px;
 }
 
-.cta-agendar .cta-secundario-btn {
-    border-color: var(--azul-profundo);
-    color: var(--azul-profundo) !important;
-}
-
-.cta-agendar .cta-secundario-btn:hover {
-    background-color: var(--azul-profundo);
-    color: var(--verde-menta) !important;
-}
-
-/* --- CTA Fixo WhatsApp --- */
-.cta-fixo-whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: #25D366; /* Cor do WhatsApp */
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    transition: transform 0.2s;
-}
-
-.cta-fixo-whatsapp:hover {
-    transform: scale(1.1);
-}
-
-/* --- Footer --- */
+/* Footer */
 footer {
-    background-color: var(--azul-profundo);
+    background-color: var(--texto-escuro);
     color: var(--texto-claro);
-    padding-top: 40px;
+    padding: 40px 5% 10px 5%;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
     padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-info, .footer-links, .footer-legal {
     flex: 1;
-    min-width: 250px;
-    margin-bottom: 20px;
+    min-width: 200px;
 }
 
 .footer-info h3 {
     color: var(--verde-menta);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.4em;
 }
 
 .footer-info p {
     margin-bottom: 8px;
+    font-size: 0.9em;
+}
+
+.footer-info i {
+    margin-right: 8px;
+    color: var(--verde-menta);
 }
 
 .footer-links h4, .footer-legal h4 {
     color: var(--branco);
-    font-size: 1.2em;
     margin-bottom: 15px;
+    font-size: 1.1em;
 }
 
 .footer-links ul, .footer-legal ul {
@@ -540,9 +408,10 @@ footer {
 }
 
 .footer-links a, .footer-legal a {
+    display: block;
     color: var(--texto-claro);
     padding: 5px 0;
-    display: block;
+    font-size: 0.9em;
 }
 
 .footer-links a:hover, .footer-legal a:hover {
@@ -551,321 +420,399 @@ footer {
 
 .footer-copy {
     text-align: center;
-    border-top: 1px solid #00608c;
-    padding: 15px 0;
-    font-size: 0.9em;
-    color: #999;
+    padding-top: 15px;
+    font-size: 0.8em;
+    color: var(--texto-claro);
 }
 
-/* --- Seções de Tratamentos (Tratamentos.html) --- */
-.hero-tratamentos {
-    background-color: var(--azul-profundo);
-    color: var(--branco);
-    padding: 80px 0;
-    text-align: center;
-}
-
-.hero-tratamentos h1 {
-    font-size: 3em;
-    color: var(--verde-menta);
-    margin-bottom: 10px;
-}
-
-.hero-tratamentos .subtitulo {
-    font-size: 1.3em;
-    margin-bottom: 30px;
-}
-
-.protocolo-ilib, .protocolo-feridas {
-    padding: 60px 0;
-}
-
-.protocolo-feridas {
-    background-color: var(--branco);
-}
-
-.protocolo-content {
+/* CTA Fixo (WhatsApp) */
+#cta-fixo-agendar {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366; /* Cor do WhatsApp */
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 40px;
-    margin-top: 40px;
-}
-
-.protocolo-content.reverso {
-    flex-direction: row-reverse;
-}
-
-.protocolo-texto {
-    flex: 1;
-}
-
-.protocolo-texto h3 {
     font-size: 1.8em;
-    color: var(--azul-profundo);
-    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+    transition: transform 0.2s;
 }
 
-.protocolo-texto ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 20px 0;
+#cta-fixo-agendar:hover {
+    transform: scale(1.1);
 }
 
-.protocolo-texto ul li {
-    font-size: 1.05em;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-}
-
-.protocolo-texto ul li i {
-    color: var(--verde-menta);
-    margin-right: 10px;
-    font-size: 1.2em;
-}
-
-.protocolo-imagem {
-    flex: 1;
-    text-align: center;
-}
-
-.protocolo-imagem img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.protocolo-focado {
-    background-color: var(--prata-claro);
-    padding: 60px 0;
-    text-align: center;
-}
-
-.protocolo-focado .recursos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.protocolo-focado .recurso-card {
-    background-color: var(--branco);
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: var(--sombra-card);
-    transition: transform 0.3s;
-}
-
-.protocolo-focado .recurso-card i {
-    font-size: 2.5em;
-    color: var(--verde-menta);
-    margin-bottom: 15px;
-}
-
-.protocolo-focado .recurso-card h4 {
-    font-size: 1.4em;
-    color: var(--azul-profundo);
-    margin-bottom: 10px;
-}
-
-/* --- Seção de Galeria de Tratamentos (Novo Estilo) --- */
-.galeria-tratamentos {
-    padding: 60px 5%;
-    background-color: var(--branco); /* Fundo claro para contraste */
-}
-
-.galeria-grid {
-    display: grid;
-    /* Colunas: 3 na maioria dos dispositivos, mínimo de 250px por imagem */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    gap: 20px;
-    margin-top: 40px;
-}
-
-.galeria-grid img {
-    width: 100%;
-    height: 300px; /* Altura fixa para manter um layout mais limpo */
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.galeria-grid img:hover {
-    transform: scale(1.05); /* Efeito de zoom sutil ao passar o mouse */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
-
-/* --- Formulário de Contato (contato.html) --- */
-.contato-secao {
-    padding: 60px 0;
-}
-
-.formulario-agendamento {
-    background-color: var(--branco);
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    max-width: 900px;
-    margin: 40px auto 0;
-}
-
-.formulario-agendamento-secao {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.formulario-agendamento .info-contato {
-    background-color: var(--azul-profundo);
-    color: var(--branco);
-    padding: 30px;
-    border-radius: 8px;
-    height: 100%;
-}
-
-.formulario-agendamento .info-contato h3 {
-    color: var(--verde-menta);
-    margin-bottom: 15px;
-}
-
-.formulario-agendamento .info-contato p {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-}
-
-.formulario-agendamento .info-contato i {
-    margin-right: 10px;
-    color: var(--verde-menta);
-}
-
-.formulario-agendamento form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.formulario-agendamento input,
-.formulario-agendamento textarea,
-.formulario-agendamento select {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid var(--cinza-subtil);
-    border-radius: 6px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1em;
-}
-
-.formulario-agendamento textarea {
-    resize: vertical;
-}
-
-.formulario-agendamento button[type="submit"] {
-    background-color: var(--verde-menta);
-    color: var(--azul-profundo);
-    border: none;
-    padding: 15px;
-    border-radius: 50px;
-    font-size: 1.1em;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 10px;
-}
-
-.formulario-agendamento button[type="submit"]:hover {
-    background-color: #5bb09f;
-}
-
-
-/* --- Política de Privacidade / Termos de Uso (Estilo de Conteúdo Simples) --- */
-.conteudo-legal {
-    max-width: 900px;
-    margin: 0 auto;
-    background-color: var(--branco);
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-.conteudo-legal h1 {
-    font-size: 2.5em;
-    color: var(--azul-profundo);
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.conteudo-legal h2 {
-    font-size: 1.8em;
-    color: var(--verde-menta);
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-.conteudo-legal p, .conteudo-legal ul {
-    margin-bottom: 15px;
-}
-
-.conteudo-legal ul {
-    padding-left: 20px;
-    list-style: disc;
-}
-
-
-/* --- Cookie Banner --- */
+/* Cookie Banner */
 #cookie-banner {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
+    background-color: var(--texto-escuro);
+    color: var(--branco);
+    padding: 20px 5%;
+    text-align: center;
+    z-index: 9999;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    display: none; /* Inicia oculto */
+}
+
+/* --- ESTILOS ESPECÍFICOS: QUEM SOMOS --- */
+.perfil-secao {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.perfil-imagem img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.perfil-texto h2 {
+    color: var(--verde-menta);
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.perfil-texto h1 {
+    font-size: 2.5em;
+    color: var(--azul-profundo);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.perfil-texto p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.perfil-texto ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.perfil-texto ul li {
+    font-size: 1em;
+    margin-bottom: 10px;
+    padding-left: 1.5em;
+    position: relative;
+    color: var(--texto-escuro);
+}
+
+.perfil-texto ul li::before {
+    content: "\f058"; /* Ícone de check circle */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: var(--verde-menta);
+    position: absolute;
+    left: 0;
+}
+
+/* --- ESTILOS ESPECÍFICOS: TRATAMENTOS --- */
+.tratamento-section {
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+    text-align: left;
+}
+
+.tratamento-header {
+    display: flex;
     background-color: var(--azul-profundo);
     color: var(--branco);
-    padding: 15px 5%;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 50px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.tratamento-header img {
+    width: 40%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.tratamento-info {
+    padding: 40px;
+    width: 60%;
+}
+
+.tratamento-info h2 {
+    font-size: 2.5em;
+    color: var(--verde-menta);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.tratamento-info p {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+}
+
+.beneficios-list {
+    list-style: none;
+    padding: 0;
+}
+
+.beneficios-list li {
+    font-size: 1em;
+    margin-bottom: 10px;
+    padding-left: 1.8em;
+    position: relative;
+}
+
+.beneficios-list li::before {
+    content: "\f00c"; /* Ícone de check */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: var(--verde-menta);
+    position: absolute;
+    left: 0;
+}
+
+/* Inversão para a segunda seção (Feridas) */
+.tratamento-header.feridas {
+    flex-direction: row-reverse;
+    background-color: var(--verde-menta);
+    color: var(--azul-profundo);
+}
+
+.tratamento-header.feridas .tratamento-info h2 {
+    color: var(--azul-profundo);
+}
+
+.tratamento-header.feridas .beneficios-list li {
+    color: var(--azul-profundo);
+}
+
+.tratamento-header.feridas .beneficios-list li::before {
+    color: var(--azul-profundo);
+}
+
+/* --- ESTILOS ESPECÍFICOS: CONTATO --- */
+.formulario-agendamento-secao {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: var(--branco);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    text-align: left;
+}
+
+.formulario-info {
+    padding-right: 20px;
+}
+
+.formulario-info h2 {
+    font-size: 2em;
+    color: var(--azul-profundo);
+    margin-bottom: 15px;
+}
+
+.formulario-info p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.formulario-info ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.formulario-info ul li {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.formulario-info i {
+    margin-right: 10px;
+    color: var(--verde-menta);
+    font-size: 1.2em;
+}
+
+.form-contato label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--azul-profundo);
+}
+
+.form-contato input[type="text"],
+.form-contato input[type="email"],
+.form-contato input[type="tel"],
+.form-contato textarea,
+.form-contato select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus,
+.form-contato select:focus {
+    border-color: var(--verde-menta);
+    outline: none;
+}
+
+.form-contato textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.form-contato button[type="submit"] {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+/* --- ESTILOS ESPECÍFICOS: FAQ --- */
+.faq-container {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: left;
+}
+
+.faq-item {
+    background-color: var(--branco);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.faq-pergunta {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 2000;
+    padding: 20px;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--azul-profundo);
+    cursor: pointer;
+    background-color: #eaf3f8; /* Azul claro para o fundo */
+    border-radius: 8px;
+    transition: background-color 0.3s;
 }
 
-/* --- Responsividade --- */
+.faq-pergunta:hover {
+    background-color: #daeaf3;
+}
 
-/* Tablets e Telas Médias (max-width 1024px) */
+.faq-pergunta i {
+    transition: transform 0.3s;
+}
+
+.faq-pergunta[aria-expanded="true"] i {
+    transform: rotate(180deg);
+}
+
+.faq-resposta {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: var(--branco);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.faq-resposta p {
+    font-size: 1em;
+    color: var(--texto-escuro);
+}
+
+/* --- RESPONSIVIDADE --- */
+
+/* Tablets e Desktops Menores (max-width 1024px) */
 @media (max-width: 1024px) {
-    .hero-content h1 {
-        font-size: 3em;
+    .servico-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 
-    .feridas-content, .quem-somos-content, .protocolo-content {
+    .servico-card img {
+        height: 300px;
+    }
+
+    .quem-somos-blurb {
         flex-direction: column;
         text-align: center;
     }
 
-    .feridas-imagem, .quem-somos-imagem, .protocolo-imagem {
-        order: -1; /* Move a imagem para cima no modo coluna */
-        margin-bottom: 30px;
-    }
-    
-    .quem-somos-imagem img {
-        max-width: 250px;
+    .quem-somos-blurb img {
+        width: 120px;
+        height: 120px;
     }
 
-    .feridas-texto, .protocolo-texto {
-        text-align: left; /* Mantém o texto justificado/alinhado à esquerda dentro das colunas */
+    .perfil-secao {
+        grid-template-columns: 1fr;
+        text-align: center;
     }
 
-    .protocolo-content.reverso {
+    .perfil-imagem {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .tratamento-header {
         flex-direction: column;
     }
-    
-    .feridas-texto ul li {
-        background-position: left top 5px;
+
+    .tratamento-header img {
+        width: 100%;
+        height: 350px;
     }
-    
-    .diferenciais-grid, .recursos-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    .tratamento-info {
+        width: 100%;
+    }
+
+    .tratamento-header.feridas {
+        flex-direction: column;
+    }
+
+    .tratamento-header.feridas img {
+        order: 1;
+    }
+
+    .tratamento-header.feridas .tratamento-info {
+        order: 2;
     }
 
     .formulario-agendamento-secao {
@@ -881,11 +828,6 @@ footer {
         flex: 1 1 100%; /* Ocupa linha inteira */
         margin-bottom: 20px;
     }
-    
-    .cta-principal-btn {
-        padding: 12px 25px;
-        font-size: 0.9em;
-    }
 }
 
 /* Smartphones (max-width 768px) */
@@ -900,10 +842,6 @@ footer {
 
     .hero-content h2 {
         font-size: 2em;
-    }
-    
-    .titulo-secao {
-        font-size: 1.8em;
     }
 
     .menu-desktop {
@@ -928,11 +866,11 @@ footer {
     }
 
     .menu-desktop a {
-        padding: 15px 20px;
+        padding: 15px 25px;
         width: 100%;
         display: block;
     }
-    
+
     .menu-desktop a::after {
         display: none;
     }
@@ -940,26 +878,20 @@ footer {
     .menu-mobile-btn {
         display: block;
     }
-    
-    .cta-menu {
-        margin: 10px 20px 15px;
+
+    .titulo-secao {
+        font-size: 2em;
+    }
+
+    .subtitulo-secao {
+        font-size: 1em;
+    }
+
+    .servico-content {
         text-align: center;
     }
 
-    section {
-        padding: 40px 0;
-    }
-    
-    .galeria-grid {
-        grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
-    }
-    .galeria-grid img {
-        height: 250px;
-    }
-    
-    #cookie-banner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+    .quem-somos-blurb {
+        gap: 20px;
     }
 }
