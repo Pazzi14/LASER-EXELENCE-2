@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    <link rel="icon" type="image/png" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/jpeg" href="FAVICON.jpg"> 
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SEU_GA4_ID"></script>
     <script>
@@ -23,206 +23,119 @@
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
       n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq){f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
       n.queue=[];t=b.createElement(e);t.async=!0;
       t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}}
-      (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', 'SEU_META_PIXEL_ID'); // Substitua 'YOUR_PIXEL_ID' pelo seu ID real
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', 'SEU_PIXEL_ID'); 
       fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=SEU_META_PIXEL_ID&ev=PageView&noscript=1"
+      src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
     /></noscript>
     
+    <div id="hero-3d-background"></div>
+
     <header>
-        <div class="logo">
-            <a href="index.html">Laser Excellence</a>
-        </div>
-        <nav class="menu-desktop">
-            <ul>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="LOGOTIPO.jpg" alt="Laser Excellence | Marcela F. Molinaro">
+                </a>
+            </div>
+            <nav class="menu-desktop">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="tratamentos.html">Protocolos</a></li>
                 <li><a href="quem-somos.html">Quem Somos</a></li>
                 <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contato.html" class="cta-menu">Agendar Avaliação</a></li>
-            </ul>
-        </nav>
-        <button class="menu-mobile-btn"><i class="fas fa-bars"></i></button>
+                <li><a href="contato.html" class="cta-principal-btn" style="margin-top: 0; padding: 10px 20px;">Agendar Avaliação</a></li>
+            </nav>
+            <div class="menu-mobile-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
     </header>
 
     <main>
         <section class="hero">
-            <div id="hero-3d-background"></div>
-            <div class="container hero-content">
-                <h1 data-scroll-reveal>A Ciência da Biofotônica a Serviço da Sua Saúde.</h1>
-                <p data-scroll-reveal>Tratamento de Feridas Crônicas e Laserterapia (ILIB) com Enfermagem Especializada em São Paulo.</p>
-                <a href="contato.html" class="cta-principal-btn" data-scroll-reveal>Agendar Minha Avaliação</a>
+            <div class="hero-content">
+                <h2 data-scroll-reveal>Excelência em Biofotônica, Laserterapia e Tratamento de Feridas</h2>
+                <p data-scroll-reveal>Cuidados especializados com tecnologia e humanidade, focados na sua recuperação completa e bem-estar.</p>
+                <a href="contato.html" class="cta-principal-btn" data-scroll-reveal>Solicite Sua Avaliação Agora</a>
             </div>
         </section>
 
-        <section class="feridas-cronicas">
-            <div class="container">
-                <h2 class="titulo-secao" data-scroll-reveal>Tratamento Avançado para Feridas Crônicas</h2>
-                <p class="subtitulo-secao" data-scroll-reveal>Cuidado humanizado e tecnologia de ponta para úlceras, pé diabético e lesões complexas.</p>
-                
-                <div class="feridas-content">
-                    <div class="feridas-texto" data-scroll-reveal-origin="left">
-                        <h3>Pare de Sofrer com Feridas que Não Cicatrizam</h3>
-                        <p>Feridas que persistem por semanas ou meses exigem um olhar especialista. Utilizamos a Laserterapia de Alta Potência combinada com a Consulta de Enfermagem completa para garantir:</p>
-                        
+        <section id="protocolos" class="secao-padrao">
+            <h2 class="titulo-secao" data-scroll-reveal>Nossos Protocolos Avançados</h2>
+            <p class="subtitulo-secao" data-scroll-reveal>Combinando a Laserterapia Sistêmica (ILIB) e o Laser Focado para resultados únicos em saúde e bem-estar.</p>
+            <div class="protocolos-grid">
+
+                <div class="protocolo-card" data-scroll-reveal>
+                    <img src="WhatsApp Image 2025-10-18 at 12.42.01_98eded7c.jpg" alt="Laserterapia ILIB Sistêmica e Local">
+                    <div class="protocolo-card-content">
+                        <h3>Terapia ILIB Sistêmica</h3>
+                        <p>A Irradiação do Sangue com Laser de Baixa Potência é um tratamento inovador que atua no corpo inteiro.</p>
                         <ul>
-                            <li>Recuperação Acelerada e redução do tempo de tratamento.</li>
-                            <li>Diminuição significativa da dor e do risco de infecção.</li>
-                            <li>Protocolos personalizados e baseados em evidências científicas.</li>
-                            <li>Uso de curativos e coberturas avançadas de última geração.</li>
+                            <li><i class="fas fa-check-circle"></i> Ação antioxidante e anti-inflamatória</li>
+                            <li><i class="fas fa-check-circle"></i> Melhoria da performance física e mental</li>
+                            <li><i class="fas fa-check-circle"></i> Otimização do sistema imunológico</li>
                         </ul>
-                        <p>Recupere sua qualidade de vida com um protocolo que realmente funciona.</p>
-                        <a href="tratamentos.html#protocolo-feridas" class="cta-secundario-btn">Ver Detalhes do Protocolo</a>
+                        <a href="tratamentos.html#ilib" class="cta-principal-btn" style="padding: 10px 20px; font-size: 0.9em;">Ver Detalhes</a>
                     </div>
-                    <div class="feridas-imagem" data-scroll-reveal-origin="right">
-                        <img src="assets/images/Imagem principal.jpg" alt="Tratamento de feridas crônicas com laserterapia">
+                </div>
+
+                <div class="protocolo-card" data-scroll-reveal>
+                    <img src="WhatsApp Image 2025-10-11 at 11.46.32_a2ff379a.jpg" alt="Tratamento de Feridas Crônicas">
+                    <div class="protocolo-card-content">
+                        <h3>Tratamento de Feridas Crônicas</h3>
+                        <p>Cuidado especializado para acelerar a cicatrização de úlceras, escaras e feridas complexas.</p>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Laserterapia Focada para regeneração celular</li>
+                            <li><i class="fas fa-check-circle"></i> Curativos avançados e personalizados</li>
+                            <li><i class="fas fa-check-circle"></i> Avaliação semanal de Enfermagem especializada</li>
+                        </ul>
+                        <a href="tratamentos.html#feridas" class="cta-principal-btn" style="padding: 10px 20px; font-size: 0.9em;">Ver Detalhes</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="diferenciais">
-            <div class="container">
-                <h2 class="titulo-secao" data-scroll-reveal>Terapia ILIB: Bem-Estar e Longevidade</h2>
-                <p class="subtitulo-secao" data-scroll-reveal>Otimize sua saúde de dentro para fora com a irradiação laser sistêmica.</p>
-                
-                <div class="diferenciais-grid">
-                    <div class="diferencial-card" data-scroll-reveal>
-                        <i class="fas fa-sun"></i>
-                        <h4>Efeito Antioxidante</h4>
-                        <p>Combate radicais livres, promovendo o rejuvenescimento e prevenindo o envelhecimento celular.</p>
-                    </div>
-                    <div class="diferencial-card" data-scroll-reveal>
-                        <i class="fas fa-heartbeat"></i>
-                        <h4>Melhora Circulatória</h4>
-                        <p>Aumenta a oxigenação sanguínea e melhora a microcirculação em todo o organismo.</p>
-                    </div>
-                    <div class="diferencial-card" data-scroll-reveal>
-                        <i class="fas fa-bed"></i>
-                        <h4>Qualidade de Vida</h4>
-                        <p>Reduz estresse, melhora o sono e alivia dores crônicas de forma não invasiva.</p>
-                    </div>
+        <section id="servico" class="secao-secundaria">
+            <div class="servico-grid">
+                <div class="servico-card" data-scroll-reveal-origin="left">
+                    <img src="WhatsApp Image 2025-10-11 at 11.46.33_9bc0e49f.jpg" alt="Ferida Crônica em Tratamento">
                 </div>
-                <div class="cta-container" style="margin-top: 50px;" data-scroll-reveal>
-                    <a href="tratamentos.html#protocolo-ilib" class="cta-principal-btn">Quero o Protocolo ILIB</a>
+                <div class="servico-content" data-scroll-reveal-origin="right">
+                    <h3>Cicatrização Acelerada com Laser</h3>
+                    <p>A Biofotônica utiliza o poder da luz (laser de baixa intensidade) para estimular a produção de colágeno, reduzir a inflamação e eliminar bactérias, resultando em uma cicatrização mais rápida e menos dolorosa. Nossa abordagem é baseada na Consulta de Enfermagem para traçar o melhor plano para cada ferida.</p>
+                    <a href="contato.html" class="cta-principal-btn">Quero Agendar</a>
                 </div>
             </div>
         </section>
 
-        <section class="quem-somos">
-            <div class="container">
-                <h2 class="titulo-secao" data-scroll-reveal>Marcela F. Molinaro: Sua Especialista em Biofotônica</h2>
-                <p class="subtitulo-secao" style="color: var(--texto-claro);" data-scroll-reveal>Mais de 10 anos de experiência transformando vidas através do cuidado especializado.</p>
-                
-                <div class="quem-somos-content">
-                    <div class="quem-somos-imagem" data-scroll-reveal-origin="left">
-                        <img src="assets/images/WhatsApp Image 2025-10-11 at 11.46.33_9bc0e49f.jpg" alt="Enfermeira Marcela F. Molinaro">
-                    </div>
-                    <div class="quem-somos-texto" data-scroll-reveal-origin="right">
-                        <h3>Metodologia Própria e Certificada</h3>
-                        <p>Com registro Coren/SP 456789, Marcela Molinaro é Enfermeira Especialista em Laserterapia e Tratamento de Feridas Crônicas. Sua abordagem é baseada na **Consulta de Enfermagem**, garantindo que o tratamento não foque apenas na lesão, mas na saúde integral do paciente.</p>
-                        
-                        <p>Acreditamos que a tecnologia é uma ferramenta poderosa, mas o cuidado humanizado é o que acelera a verdadeira recuperação.</p>
-                        <a href="quem-somos.html" class="cta-secundario-btn">Conheça Mais Sobre a Marcela</a>
-                    </div>
+        <section id="quem-somos-blurb" class="secao-padrao" style="padding-bottom: 40px;">
+            <h2 class="titulo-secao" data-scroll-reveal>A Excelência por Trás do Laser</h2>
+            <div class="quem-somos-blurb" data-scroll-reveal>
+                <img src="Imagem principal.jpg" alt="Enfermeira Marcela F. Molinaro">
+                <div class="blurb-text">
+                    <h4>Enfermeira Marcela F. Molinaro</h4>
+                    <h3>Especialista em Biofotônica e Tratamento de Feridas</h3>
+                    <p>Com mais de 10 anos de experiência, Marcela Molinaro combina o conhecimento científico com uma abordagem humanizada para oferecer protocolos de tratamento que realmente transformam a saúde e a qualidade de vida de seus pacientes. Membro de sociedades renomadas de Enfermagem Estética e Dermatológica.</p>
+                    <a href="quem-somos.html" style="font-weight: 600;">Saiba mais sobre a Especialista <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </section>
 
-        <section class="depoimentos">
-            <div class="container">
-                <h2 class="titulo-secao" data-scroll-reveal>Quem Já Transformou a Vida Conosco</h2>
-                <p class="subtitulo-secao" data-scroll-reveal>Veja o que nossos pacientes e clientes dizem sobre a Laser Excellence.</p>
-                
-                <div class="depoimentos-grid">
-                    <div class="depoimento-card" data-scroll-reveal>
-                        <i class="fas fa-quote-left"></i>
-                        <p>"Em dois meses de tratamento a ferida do meu pai, que não fechava há um ano, está quase 100%. O laser faz milagres, mas o cuidado e a dedicação da Marcela são essenciais."</p>
-                        <span class="depoimento-autor">- Sra. Ana P., Acompanhante</span>
-                    </div>
-                    <div class="depoimento-card" data-scroll-reveal>
-                        <i class="fas fa-quote-left"></i>
-                        <p>"Comecei o ILIB para melhorar a performance esportiva e o que mais notei foi a melhora na qualidade do meu sono. É um tratamento que traz bem-estar geral. Recomendo!"</p>
-                        <span class="depoimento-autor">- João V., Atleta Amador</span>
-                    </div>
-                    <div class="depoimento-card" data-scroll-reveal>
-                        <i class="fas fa-quote-left"></i>
-                        <p>"O medo de perder o pé diabético era constante. A Marcela me deu esperança, utilizando o laser de forma precisa. O resultado superou todas as expectativas médicas iniciais."</p>
-                        <span class="depoimento-autor">- Sr. Carlos M., Paciente</span>
-                    </div>
-                </div>
-            </div>
+        <section id="cta-final" class="cta-contato">
+            <h2 data-scroll-reveal>Pronto para Transformar Sua Saúde?</h2>
+            <p data-scroll-reveal>Agende sua avaliação e descubra o protocolo ideal para o seu bem-estar e cicatrização.</p>
+            <a href="contato.html" class="cta-principal-btn" data-scroll-reveal>Fale Conosco e Agende</a>
         </section>
-
-        <section class="cta-agendar">
-            <div class="container" data-scroll-reveal>
-                <h2>Acelere Sua Recuperação Agora!</h2>
-                <p>O cuidado que você merece está a um clique de distância. Agende sua Consulta de Enfermagem.</p>
-                <a href="contato.html" class="cta-secundario-btn">Quero Agendar Minha Avaliação</a>
-            </div>
-        </section>
-        
-        <section class="faq-section">
-            <div class="container">
-                <h2 class="titulo-secao" data-scroll-reveal>Dúvidas Comuns (FAQ)</h2>
-                <p class="subtitulo-secao" data-scroll-reveal>Encontre respostas rápidas sobre a Laserterapia e os protocolos de tratamento.</p>
-
-                <div class="faq-container">
-                    
-                    <div class="faq-item" data-scroll-reveal>
-                        <div class="faq-pergunta" data-target="resposta1" aria-expanded="false">
-                            O tratamento a laser tem efeitos colaterais?
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-resposta" id="resposta1">
-                            <p>Não, a Laserterapia de Baixa Potência e a Terapia ILIB são tratamentos não invasivos, indolores e livres de efeitos colaterais quando realizados por um profissional qualificado.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item" data-scroll-reveal>
-                        <div class="faq-pergunta" data-target="resposta2" aria-expanded="false">
-                            Quanto tempo dura o tratamento de feridas crônicas?
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-resposta" id="resposta2">
-                            <p>O tempo de tratamento varia muito de paciente para paciente e depende da causa, do tamanho e da profundidade da ferida. No entanto, o uso do laser acelera significativamente o processo, frequentemente reduzindo o tempo de cicatrização pela metade em comparação com métodos tradicionais.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item" data-scroll-reveal>
-                        <div class="faq-pergunta" data-target="resposta3" aria-expanded="false">
-                            A Laser Excellence atende em domicílio (home care)?
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-resposta" id="resposta3">
-                            <p>Sim. Para maior conforto e para pacientes com dificuldades de locomoção, oferecemos atendimento em domicílio em São Paulo (consulte a área de cobertura). O equipamento de laser é totalmente portátil.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="cta-container" style="margin-top: 50px;" data-scroll-reveal>
-                    <a href="faq.html" class="cta-secundario-btn">Ver Todas as Perguntas</a>
-                </div>
-            </div>
-        </section>
-        
-        <a href="https://api.whatsapp.com/send?phone=5511987654321&text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20sobre%20Laserterapia%20e%20Feridas." 
-           class="cta-fixo-whatsapp" 
-           id="cta-fixo-agendar" 
-           target="_blank" 
-           title="Fale Conosco pelo WhatsApp">
-           <i class="fab fa-whatsapp"></i>
-        </a>
     </main>
 
     <footer>
-        <div class="container footer-container">
+        <div class="footer-container">
             <div class="footer-info">
                 <h3>Laser Excellence | Marcela F. Molinaro</h3>
                 <p>Enfermagem Especializada Coren/SP 456789</p>
@@ -252,9 +165,13 @@
             &copy; 2025 Laser Excellence | Marcela F. Molinaro. Todos os direitos reservados.
         </div>
     </footer>
+
+    <a href="https://api.whatsapp.com/send?phone=5511987654321&text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20laserterapia%20ou%20feridas." target="_blank" id="cta-fixo-agendar">
+        <i class="fab fa-whatsapp"></i>
+    </a>
     
-    <div id="cookie-banner" style="display: none;">
-        <p>Este site utiliza cookies para garantir a melhor experiência, analisar tráfego e rastreamento de campanhas. Ao continuar, você concorda com nossa <a href="politica-privacidade.html" style="color: var(--verde-menta); text-decoration: underline;">Política de Privacidade</a>.</p>
+    <div id="cookie-banner">
+        <p>Utilizamos cookies para otimizar sua experiência e rastreamento de campanhas. Ao continuar, você concorda com nossa <a href="politica-privacidade.html" style="color: var(--verde-menta); text-decoration: underline;">Política de Privacidade</a>.</p>
         <button onclick="aceitarCookies()" style="background: var(--verde-menta); color: var(--azul-profundo); border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; margin-top: 10px; font-weight: bold;">Aceitar e Continuar</button>
     </div>
 
@@ -279,7 +196,7 @@
         }
 
         if (localStorage.getItem('cookieConsent') !== 'true') {
-            document.getElementById('cookie-banner').style.display = 'flex';
+            document.getElementById('cookie-banner').style.display = 'block';
         }
     </script>
 </body>
