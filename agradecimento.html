@@ -6,7 +6,7 @@
     <title>Obrigado! Sua Avaliação Foi Solicitada | Laser Excellence</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" type="image/png" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/jpeg" href="FAVICON.jpg">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SEU_GA4_ID"></script>
     <script>
@@ -28,55 +28,46 @@
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
       n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq){f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
       n.queue=[];t=b.createElement(e);t.async=!0;
       t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}}
-      (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', 'SEU_META_PIXEL_ID'); // Substitua 'YOUR_PIXEL_ID' pelo seu ID real
-      fbq('track', 'Lead', { content_name: 'Lead_Form_Submetido' });
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', 'SEU_PIXEL_ID'); 
+      fbq('track', 'Purchase', {value: 0.00, currency: 'BRL'}); // Substituir por evento de Lead, ou Purchase se for pago
     </script>
     <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=SEU_META_PIXEL_ID&ev=Lead&noscript=1"
+      src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
     /></noscript>
     
-    <header style="background-color: var(--azul-profundo); padding: 20px 5%;">
-        <div class="logo">
-            <a href="index.html" style="color: var(--verde-menta); font-size: 1.8em; font-weight: 700;">Laser Excellence</a>
-        </div>
-    </header>
-
-    <main>
-        <section style="padding: 60px 5%; background-color: var(--prata-claro); min-height: 85vh; display: flex; align-items: center;">
-            <div class="container" style="text-align: center; max-width: 800px; margin: 0 auto; background-color: var(--azul-profundo); color: white; padding: 50px; border-radius: 15px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);">
-                
-                <i class="fas fa-check-circle" style="font-size: 4em; color: var(--verde-menta); margin-bottom: 20px;"></i>
-                <h1 style="font-size: 3em; color: var(--verde-menta); margin-bottom: 10px;">Solicitação Recebida com Sucesso!</h1>
-                <h2 style="font-size: 2.2em; margin-bottom: 20px;">O Próximo Passo é Confirmar Seu Horário.</h2>
-                
-                <div style="background: rgba(255, 255, 255, 0.1); padding: 25px; border-radius: 10px; margin-bottom: 30px;">
-                    <p style="font-size: 1.1em; font-weight: bold;">
-                        ✅ Nossa equipe entrará em contato via **WhatsApp (11) 98765-4321** em no máximo **1 hora útil** para confirmar os detalhes da sua avaliação.
-                    </p>
-                    <p style="margin-top: 15px;">Aguarde o nosso contato ou nos chame agora:</p>
-                </div>
-                
-                <a href="https://api.whatsapp.com/send?phone=5511987654321&text=Ol%C3%A1%2C%20acabei%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20pelo%20site%20e%20gostaria%20de%20confirmar." 
-                    class="cta-principal-btn" target="_blank" style="background-color: #25D366; color: white; margin-bottom: 15px;">
-                    <i class="fab fa-whatsapp"></i> Chamar no WhatsApp para Confirmar
-                </a>
-                
-                <a href="index.html" class="cta-principal-btn" style="background-color: var(--verde-menta); color: var(--azul-profundo);">
-                    Voltar para Home
-                </a>
+    <main style="background-color: var(--azul-profundo); min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center;">
+        <section style="max-width: 800px; margin: 50px auto; padding: 40px; background-color: rgba(255, 255, 255, 0.1); border-radius: 15px; color: white;">
+            
+            <div style="margin-bottom: 30px;">
+                <img src="LOGOTIPO.jpg" alt="Laser Excellence | Marcela F. Molinaro" style="height: 50px; width: auto; max-width: 300px;">
             </div>
+
+            <h1 style="font-size: 3em; margin-bottom: 20px; color: var(--verde-menta);">Solicitação Recebida com Sucesso!</h1>
+            <h2 style="font-size: 2.2em; margin-bottom: 20px;">O Próximo Passo é Confirmar Seu Horário.</h2>
+                
+            <div style="background: rgba(255, 255, 255, 0.1); padding: 25px; border-radius: 10px; margin-bottom: 30px;">
+                <p style="font-size: 1.1em; font-weight: bold;">
+                    ✅ Nossa equipe entrará em contato via **WhatsApp (11) 98765-4321** em no máximo **1 hora útil** para confirmar os detalhes da sua avaliação.
+                </p>
+                <p style="margin-top: 15px;">Aguarde o nosso contato ou nos chame agora:</p>
+            </div>
+                
+            <a href="https://api.whatsapp.com/send?phone=5511987654321&text=Ol%C3%A1%2C%20acabei%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20pelo%20site%20e%20gostaria%20de%20confirmar." 
+                class="cta-principal-btn" target="_blank" style="background-color: #25D366; color: white;">
+                <i class="fab fa-whatsapp"></i> Chamar no WhatsApp para Confirmar
+            </a>
+                
+            <a href="index.html" class="cta-principal-btn" style="background-color: var(--verde-menta); color: var(--azul-profundo); margin-top: 20px;">
+                <i class="fas fa-home"></i> Voltar para Home
+            </a>
+
+            <p style="margin-top: 40px; font-size: 0.9em; color: rgba(255, 255, 255, 0.7);">Você pode fechar esta página. Seu agendamento está em processamento.</p>
         </section>
     </main>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="js/futuristic-3d.js"></script>
-    <script src="js/scroll-animations.js"></script>
-    <script src="js/tracking.js"></script>
 </body>
 </html>
