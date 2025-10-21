@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perguntas Frequentes (FAQ) | Laser Excellence</title>
-    <meta name="description" content="Tire suas dúvidas sobre a Laserterapia (ILIB e Focada), Tratamento de Feridas Crônicas, custos e agendamento de consultas.">
+    <title>FAQ - Perguntas Frequentes | Laser Excellence</title>
+    <meta name="description" content="Tire suas dúvidas sobre Laserterapia, Terapia ILIB, Tratamento de Feridas e a Consulta de Enfermagem Especializada.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" type="image/png" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/jpeg" href="FAVICON.jpg">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SEU_GA4_ID"></script>
     <script>
@@ -22,129 +22,100 @@
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
       n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq){f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
       n.queue=[];t=b.createElement(e);t.async=!0;
       t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}}
-      (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', 'SEU_META_PIXEL_ID'); // Substitua 'YOUR_PIXEL_ID' pelo seu ID real
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', 'SEU_PIXEL_ID'); 
       fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=SEU_META_PIXEL_ID&ev=PageView&noscript=1"
+      src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
     /></noscript>
     
+    <div id="hero-3d-background"></div>
+
     <header>
-        <div class="logo">
-            <a href="index.html">Laser Excellence</a>
-        </div>
-        <nav class="menu-desktop">
-            <ul>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="LOGOTIPO.jpg" alt="Laser Excellence | Marcela F. Molinaro">
+                </a>
+            </div>
+            <nav class="menu-desktop">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="tratamentos.html">Protocolos</a></li>
                 <li><a href="quem-somos.html">Quem Somos</a></li>
                 <li><a href="faq.html" class="active">FAQ</a></li>
-                <li><a href="contato.html" class="cta-menu">Agendar Avaliação</a></li>
-            </ul>
-        </nav>
-        <button class="menu-mobile-btn"><i class="fas fa-bars"></i></button>
+                <li><a href="contato.html" class="cta-principal-btn" style="margin-top: 0; padding: 10px 20px;">Agendar Avaliação</a></li>
+            </nav>
+            <div class="menu-mobile-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
     </header>
 
     <main>
-        <section class="faq-section" style="padding: 60px 0; min-height: 80vh;">
-            <div class="container">
-                <h1 class="titulo-secao" data-scroll-reveal>Perguntas Frequentes (FAQ)</h1>
-                <p class="subtitulo-secao" data-scroll-reveal>Tudo o que você precisa saber sobre a Laserterapia e nossos protocolos de tratamento.</p>
+        <section class="secao-padrao">
+            <h1 class="titulo-secao" data-scroll-reveal>Perguntas Frequentes (FAQ)</h1>
+            <p class="subtitulo-secao" data-scroll-reveal>Encontre respostas rápidas para as dúvidas mais comuns sobre nossos serviços de Laserterapia e Tratamento de Feridas.</p>
 
-                <div class="faq-container">
-                    
-                    <h2 style="font-size: 1.6em; color: var(--azul-profundo); margin-top: 30px;" data-scroll-reveal>Sobre a Laserterapia</h2>
-                    <div class="faq-item" data-scroll-reveal>
-                        <div class="faq-pergunta" data-target="resp_laser1" aria-expanded="false">
-                            O que exatamente é a Biofotônica (Laserterapia)?
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-resposta" id="resp_laser1">
-                            <p>A Biofotônica ou Laserterapia é o uso da luz laser em baixa potência para estimular processos biológicos no corpo. Ela atua na regeneração celular, na redução da dor e da inflamação, e na otimização da cicatrização de tecidos, sem causar calor ou danos.</p>
-                        </div>
+            <div class="faq-container" data-scroll-reveal>
+                
+                <div class="faq-item">
+                    <div class="faq-pergunta" data-target="resposta1" aria-expanded="false">
+                        <span>O que é Terapia ILIB?</span>
+                        <i class="fas fa-chevron-down"></i>
                     </div>
-                    <div class="faq-item" data-scroll-reveal>
-                        <div class="faq-pergunta" data-target="resp_laser2" aria-expanded="false">
-                            A Terapia ILIB é segura?
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-resposta" id="resp_laser2">
-                            <p>Sim, a ILIB (Intravascular Laser Irradiation of Blood) é extremamente segura e não invasiva. A aplicação é feita externamente, na artéria radial do pulso, e seu único efeito é a estimulação da corrente sanguínea, melhorando o metabolismo e a oxigenação celular.</p>
-                        </div>
+                    <div class="faq-resposta" id="resposta1">
+                        <p>A Terapia ILIB (Intravascular Laser Irradiation of Blood) é uma técnica que irradia o sangue com laser de baixa potência, geralmente na artéria radial. O objetivo é combater os radicais livres, melhorar a oxigenação, o sistema imunológico e otimizar o metabolismo celular, proporcionando bem-estar e melhoria em quadros crônicos como enxaqueca, insônia e dor.</p>
                     </div>
-                    <div class="faq-item" data-scroll-reveal>
-                        <div class="faq-pergunta" data-target="resp_laser3" aria-expanded="false">
-                            Existem contraindicações para o tratamento a laser?
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-resposta" id="resp_laser3">
-                            <p>Embora seja um tratamento seguro, existem algumas contraindicações relativas, como gestação, câncer ativo na área de aplicação e uso de marcapasso (no caso da ILIB). Durante a Consulta de Enfermagem, a especialista fará uma avaliação completa para garantir a segurança do protocolo.</p>
-                        </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-pergunta" data-target="resposta2" aria-expanded="false">
+                        <span>O tratamento de feridas é doloroso?</span>
+                        <i class="fas fa-chevron-down"></i>
                     </div>
-                    
-                    <h2 style="font-size: 1.6em; color: var(--azul-profundo); margin-top: 30px;" data-scroll-reveal>Tratamento de Feridas Crônicas</h2>
-                    <div class="faq-item" data-scroll-reveal>
-                        <div class="faq-pergunta" data-target="resp_feridas1" aria-expanded="false">
-                            Quais tipos de feridas vocês tratam?
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-resposta" id="resp_feridas1">
-                            <p>Somos especializados em feridas de difícil cicatrização, como Úlceras Venosas e Arteriais, Pé Diabético, Lesões por Pressão (escaras), Feridas Pós-Cirúrgicas complicadas e Queimaduras.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item" data-scroll-reveal>
-                        <div class="faq-pergunta" data-target="resp_feridas2" aria-expanded="false">
-                            Qual a diferença do tratamento com laser para o curativo tradicional?
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-resposta" id="resp_feridas2">
-                            <p>O curativo tradicional apenas protege a ferida. O tratamento especializado com Laserterapia atua ativamente no tecido, estimulando a produção de colágeno, acelerando a granulação, reduzindo a dor e eliminando bactérias. Ele é um poderoso acelerador do processo de cura, complementando o uso de coberturas avançadas.</p>
-                        </div>
-                    </div>
-                    
-                    <h2 style="font-size: 1.6em; color: var(--azul-profundo); margin-top: 30px;" data-scroll-reveal>Agendamento e Custo</h2>
-                    <div class="faq-item" data-scroll-reveal>
-                        <div class="faq-pergunta" data-target="resp_agenda1" aria-expanded="false">
-                            Como é feita a primeira consulta (Avaliação)?
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-resposta" id="resp_agenda1">
-                            <p>A primeira consulta é uma Avaliação de Enfermagem completa. Inclui a análise detalhada da ferida ou da condição do paciente, histórico de saúde, exames e, se necessário, o primeiro procedimento de laser. É a partir dessa avaliação que definimos o protocolo de tratamento e o número de sessões.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item" data-scroll-reveal>
-                        <div class="faq-pergunta" data-target="resp_agenda2" aria-expanded="false">
-                            Vocês aceitam planos de saúde?
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-resposta" id="resp_agenda2">
-                            <p>Atendemos de forma particular. No entanto, o protocolo de Laserterapia e Tratamento de Feridas pode ser reembolsável por alguns planos de saúde, dependendo do seu contrato. Fornecemos todos os laudos e recibos necessários para que você solicite o reembolso junto à sua operadora.</p>
-                        </div>
+                    <div class="faq-resposta" id="resposta2">
+                        <p>Nosso protocolo inclui a Laserterapia Focada, que possui forte ação analgésica e anti-inflamatória. O laser é aplicado antes e/ou durante a troca de curativos para minimizar o desconforto. Além disso, a escolha de curativos avançados visa um manejo menos traumático da ferida, tornando o processo de cicatrização o mais confortável possível.</p>
                     </div>
                 </div>
                 
-                <div class="cta-container" style="margin-top: 50px;" data-scroll-reveal>
-                    <a href="contato.html" class="cta-principal-btn">Ainda Tem Dúvidas? Fale Conosco</a>
+                <div class="faq-item">
+                    <div class="faq-pergunta" data-target="resposta3" aria-expanded="false">
+                        <span>Onde é realizado o atendimento?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-resposta" id="resposta3">
+                        <p>Realizamos atendimentos em clínica particular localizada em São Paulo/SP, e também oferecemos a opção de **Home Care** (atendimento domiciliar), dependendo da sua localização e da necessidade do tratamento. Após a sua solicitação, combinaremos a melhor forma de atendimento para o seu caso.</p>
+                    </div>
                 </div>
+
+                <div class="faq-item">
+                    <div class="faq-pergunta" data-target="resposta4" aria-expanded="false">
+                        <span>O tratamento com laser tem contraindicações?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-resposta" id="resposta4">
+                        <p>O laser de baixa potência é seguro, mas existem algumas contraindicações relativas ou temporárias, como em gestantes, pacientes oncológicos (em algumas fases do tratamento) e aplicação direta em glândulas tireoides. Na sua primeira avaliação, a Enfermeira Marcela Molinaro fará uma triagem completa para garantir a segurança e a eficácia do seu protocolo.</p>
+                    </div>
+                </div>
+                
             </div>
         </section>
-        
-        <a href="https://api.whatsapp.com/send?phone=5511987654321&text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20sobre%20Laserterapia%20e%20Feridas." 
-           class="cta-fixo-whatsapp" 
-           id="cta-fixo-agendar" 
-           target="_blank" 
-           title="Fale Conosco pelo WhatsApp">
-           <i class="fab fa-whatsapp"></i>
-        </a>
+
+        <section id="cta-final" class="cta-contato">
+            <h2 data-scroll-reveal>Ainda Tem Dúvidas?</h2>
+            <p data-scroll-reveal>Fale diretamente com a especialista e inicie sua jornada de tratamento.</p>
+            <a href="contato.html" class="cta-principal-btn" data-scroll-reveal>Fale Conosco Agora</a>
+        </section>
+
     </main>
 
     <footer>
-        <div class="container footer-container">
+        <div class="footer-container">
             <div class="footer-info">
                 <h3>Laser Excellence | Marcela F. Molinaro</h3>
                 <p>Enfermagem Especializada Coren/SP 456789</p>
@@ -175,6 +146,15 @@
         </div>
     </footer>
 
+    <a href="https://api.whatsapp.com/send?phone=5511987654321&text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20laserterapia%20ou%20feridas." target="_blank" id="cta-fixo-agendar">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div id="cookie-banner" style="display: none;">
+        <p>Utilizamos cookies para otimizar sua experiência e rastreamento de campanhas. Ao continuar, você concorda com nossa <a href="politica-privacidade.html" style="color: var(--verde-menta); text-decoration: underline;">Política de Privacidade</a>.</p>
+        <button onclick="aceitarCookies()" style="background: var(--verde-menta); color: var(--azul-profundo); border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; margin-top: 10px; font-weight: bold;">Aceitar e Continuar</button>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="js/futuristic-3d.js"></script>
@@ -187,6 +167,16 @@
         document.querySelector('.menu-mobile-btn').addEventListener('click', function() {
             document.querySelector('.menu-desktop').classList.toggle('active');
         });
+
+        // Lógica simples de Cookies
+        function aceitarCookies() {
+            localStorage.setItem('cookieConsent', 'true');
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+
+        if (localStorage.getItem('cookieConsent') !== 'true') {
+            document.getElementById('cookie-banner').style.display = 'block';
+        }
     </script>
 </body>
 </html>
