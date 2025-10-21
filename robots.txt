@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Exclui a página de agradecimento do índice do Google
+Disallow: /agradecimento.html
+
+Sitemap: https://www.seu-dominio.com.br/sitemap.xml
