@@ -7,7 +7,7 @@
     <meta name="description" content="Conheça a Enfermeira Marcela F. Molinaro, especialista em Tratamento de Feridas e Biofotônica. Metodologia baseada na Consulta de Enfermagem para protocolos personalizados.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" type="image/png" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/jpeg" href="FAVICON.jpg">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SEU_GA4_ID"></script>
     <script>
@@ -22,99 +22,76 @@
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
       n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq){f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
       n.queue=[];t=b.createElement(e);t.async=!0;
       t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}}
-      (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', 'SEU_META_PIXEL_ID'); // Substitua 'YOUR_PIXEL_ID' pelo seu ID real
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', 'SEU_PIXEL_ID'); 
       fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=SEU_META_PIXEL_ID&ev=PageView&noscript=1"
+      src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
     /></noscript>
     
+    <div id="hero-3d-background"></div>
+
     <header>
-        <div class="logo">
-            <a href="index.html">Laser Excellence</a>
-        </div>
-        <nav class="menu-desktop">
-            <ul>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="LOGOTIPO.jpg" alt="Laser Excellence | Marcela F. Molinaro">
+                </a>
+            </div>
+            <nav class="menu-desktop">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="tratamentos.html">Protocolos</a></li>
                 <li><a href="quem-somos.html" class="active">Quem Somos</a></li>
                 <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contato.html" class="cta-menu">Agendar Avaliação</a></li>
-            </ul>
-        </nav>
-        <button class="menu-mobile-btn"><i class="fas fa-bars"></i></button>
+                <li><a href="contato.html" class="cta-principal-btn" style="margin-top: 0; padding: 10px 20px;">Agendar Avaliação</a></li>
+            </nav>
+            <div class="menu-mobile-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
     </header>
 
     <main>
-        <section class="quem-somos" style="background-color: var(--prata-claro); color: var(--texto-escuro);">
-            <div class="container">
-                <h1 class="titulo-secao" data-scroll-reveal>Marcela F. Molinaro</h1>
-                <p class="subtitulo-secao" data-scroll-reveal>Enfermeira, Especialista em Laserterapia e Tratamento de Feridas (Coren/SP 456789)</p>
+        <section class="secao-padrao">
+            <h1 class="titulo-secao" data-scroll-reveal>Quem Está Cuidando de Você?</h1>
+            <p class="subtitulo-secao" data-scroll-reveal>A Enfermagem Especializada em Biofotônica e o Cuidado Humano.</p>
+            
+            <div class="perfil-secao">
                 
-                <div class="quem-somos-content" style="margin-top: 60px;">
-                    <div class="quem-somos-imagem" data-scroll-reveal-origin="left" style="flex: 1; text-align: center;">
-                        <img src="assets/images/WhatsApp Image 2025-10-11 at 11.46.33_e08d5b79.jpg" alt="Enfermeira Marcela Molinaro em Atendimento" style="border-radius: 12px; max-width: 400px; width: 100%; height: auto; border: 5px solid var(--azul-profundo); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
-                    </div>
-                    <div class="quem-somos-texto" data-scroll-reveal-origin="right" style="flex: 2; text-align: left;">
-                        <h2 style="font-size: 2em; color: var(--azul-profundo); margin-bottom: 20px;">Minha Missão: Transformar Cuidado em Cura</h2>
-                        
-                        <p>Sou Marcela F. Molinaro, Enfermeira com paixão pela **Biofotônica** e dedicação integral ao **Tratamento de Feridas Crônicas e Complexas**. Minha experiência de mais de uma década na área da saúde me mostrou que a recuperação vai além do medicamento; ela está no olhar atento e na tecnologia aplicada de forma correta.</p>
-                        
-                        <h3 style="color: var(--verde-menta); margin-top: 25px;">O Diferencial da Consulta de Enfermagem</h3>
-                        <p>Meu método de trabalho é baseado na **Consulta de Enfermagem**. Não tratamos apenas a ferida, mas sim o paciente como um todo. Isso envolve:</p>
-                        <ul style="list-style: none; padding-left: 0;">
-                            <li style="margin-bottom: 10px;"><i class="fas fa-user-check" style="color: var(--verde-menta); margin-right: 10px;"></i> Avaliação Nutricional e Circulatória.</li>
-                            <li style="margin-bottom: 10px;"><i class="fas fa-hand-holding-heart" style="color: var(--verde-menta); margin-right: 10px;"></i> Plano de Cuidados Humanizado e Individualizado.</li>
-                            <li style="margin-bottom: 10px;"><i class="fas fa-chart-line" style="color: var(--verde-menta); margin-right: 10px;"></i> Monitoramento rigoroso do processo de cicatrização com Laserterapia.</li>
-                        </ul>
-                        
-                        <p style="margin-top: 20px;">A Laser Excellence é a união entre a experiência clínica e as técnicas mais avançadas para garantir a sua recuperação com excelência e segurança.</p>
-                        <a href="contato.html" class="cta-principal-btn" style="margin-top: 30px;">Agendar Avaliação com a Especialista</a>
-                    </div>
+                <div class="perfil-imagem" data-scroll-reveal-origin="left">
+                    <img src="Imagem principal.jpg" alt="Enfermeira Marcela F. Molinaro">
+                </div>
+
+                <div class="perfil-texto" data-scroll-reveal-origin="right">
+                    <h2>Enfermeira Especialista Coren/SP 456789</h2>
+                    <h1>Marcela F. Molinaro</h1>
+                    
+                    <p>Enfermeira com mais de 10 anos de experiência clínica, especialista em Laserterapia (Biofotônica) e Manejo Avançado de Feridas Crônicas e Complexas. Marcela Molinaro fundou a Laser Excellence com a missão de trazer tratamentos de ponta para São Paulo, combinando a tecnologia laser com uma abordagem de cuidado humanizado e integral.</p>
+                    
+                    <p>Nossa metodologia é centrada na **Consulta de Enfermagem**, onde cada protocolo é traçado de forma individualizada, garantindo que o tratamento não seja apenas eficaz, mas também adaptado à rotina e às necessidades de cada paciente.</p>
+
+                    <a href="contato.html" class="cta-principal-btn" style="margin-top: 30px;">Agende Sua Consulta de Avaliação</a>
+                    
+                    <h3 style="color: var(--azul-profundo); font-size: 1.5em; margin-top: 40px; margin-bottom: 20px;">Áreas de Expertise:</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Laserterapia ILIB Sistêmica (Bem-estar, Performance e Imunidade)</li>
+                        <li><i class="fas fa-check-circle"></i> Laserterapia Focada (Dor, Inflamação e Cicatrização)</li>
+                        <li><i class="fas fa-check-circle"></i> Tratamento de Úlceras por Pressão, Vasculares e Pés Diabéticos</li>
+                        <li><i class="fas fa-check-circle"></i> Manejo Avançado de Feridas Crônicas</li>
+                    </ul>
+
                 </div>
             </div>
         </section>
-        
-        <section class="diferenciais" style="background-color: var(--azul-profundo); color: var(--branco);">
-            <div class="container">
-                <h2 class="titulo-secao" style="color: var(--verde-menta);" data-scroll-reveal>Nossas Áreas de Expertise</h2>
-                
-                <div class="diferenciais-grid">
-                    <div class="diferencial-card" data-scroll-reveal style="background-color: #00608c; color: white;">
-                        <i class="fas fa-laptop-medical" style="color: var(--verde-menta);"></i>
-                        <h4>Laser de Baixa e Alta Potência</h4>
-                        <p>Domínio das técnicas ILIB e focada para otimizar resultados de cicatrização e bem-estar sistêmico.</p>
-                    </div>
-                    <div class="diferencial-card" data-scroll-reveal style="background-color: #00608c; color: white;">
-                        <i class="fas fa-bacteria" style="color: var(--verde-menta);"></i>
-                        <h4>Feridas Infectadas e Complexas</h4>
-                        <p>Protocolos específicos para lidar com infecções, biofilmes e resistência bacteriana, reduzindo o risco de complicações.</p>
-                    </div>
-                    <div class="diferencial-card" data-scroll-reveal style="background-color: #00608c; color: white;">
-                        <i class="fas fa-medal" style="color: var(--verde-menta);"></i>
-                        <h4>Formação e Atualização Constante</h4>
-                        <p>Compromisso com as últimas diretrizes internacionais de WOC (Wound, Ostomy, Continence) e Biofotônica.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <a href="https://api.whatsapp.com/send?phone=5511987654321&text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20sobre%20Laserterapia%20e%20Feridas." 
-           class="cta-fixo-whatsapp" 
-           id="cta-fixo-agendar" 
-           target="_blank" 
-           title="Fale Conosco pelo WhatsApp">
-           <i class="fab fa-whatsapp"></i>
-        </a>
     </main>
 
     <footer>
-        <div class="container footer-container">
+        <div class="footer-container">
             <div class="footer-info">
                 <h3>Laser Excellence | Marcela F. Molinaro</h3>
                 <p>Enfermagem Especializada Coren/SP 456789</p>
@@ -145,17 +122,36 @@
         </div>
     </footer>
 
+    <a href="https://api.whatsapp.com/send?phone=5511987654321&text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20laserterapia%20ou%20feridas." target="_blank" id="cta-fixo-agendar">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div id="cookie-banner" style="display: none;">
+        <p>Utilizamos cookies para otimizar sua experiência e rastreamento de campanhas. Ao continuar, você concorda com nossa <a href="politica-privacidade.html" style="color: var(--verde-menta); text-decoration: underline;">Política de Privacidade</a>.</p>
+        <button onclick="aceitarCookies()" style="background: var(--verde-menta); color: var(--azul-profundo); border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; margin-top: 10px; font-weight: bold;">Aceitar e Continuar</button>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="js/futuristic-3d.js"></script>
     <script src="js/scroll-animations.js"></script>
     <script src="js/tracking.js"></script>
-    
+
     <script>
         // Lógica simples de Menu Mobile (copiada do index)
         document.querySelector('.menu-mobile-btn').addEventListener('click', function() {
             document.querySelector('.menu-desktop').classList.toggle('active');
         });
+
+        // Lógica simples de Cookies
+        function aceitarCookies() {
+            localStorage.setItem('cookieConsent', 'true');
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+
+        if (localStorage.getItem('cookieConsent') !== 'true') {
+            document.getElementById('cookie-banner').style.display = 'block';
+        }
     </script>
 </body>
 </html>
